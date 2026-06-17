@@ -1,6 +1,7 @@
-import React from 'react'
+﻿import React from 'react'
 import { Bean } from '../icons'
 import { IGIcon, TTIcon, XIcon } from '../icons'
+import newLogo from '../assets/new-logo.png'
 
 const FOOTER_LINKS = {
   'Menu':    ['Espresso Bar', 'Cold Brew', 'Seasonal', 'Pastry', 'Wholesome Bowls'],
@@ -20,10 +21,10 @@ export default function Footer() {
           <div>
             <div style={{ marginBottom: 20 }}>
               <img
-                src="/logo-badge-sm.png"
+                src={newLogo}
                 alt="Snickerdoodle Coffeeworks"
                 loading="lazy"
-                style={{ width: 96, height: 96, display: 'block' }}
+                style={{ height: 48, width: 'auto', display: 'block' }}
               />
             </div>
 
@@ -41,7 +42,7 @@ export default function Footer() {
                     color: '#C4A090', textDecoration: 'none',
                     transition: 'color .15s, background .15s',
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.color = '#D4400A'; e.currentTarget.style.background = 'rgba(212,64,10,.15)' }}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#f15a28'; e.currentTarget.style.background = 'rgba(241,90,40,.15)' }}
                   onMouseLeave={e => { e.currentTarget.style.color = '#C4A090'; e.currentTarget.style.background = 'rgba(255,253,249,.08)' }}>
                   <Icon/>
                 </a>
@@ -53,9 +54,9 @@ export default function Footer() {
           {Object.entries(FOOTER_LINKS).map(([col, links]) => (
             <div key={col}>
               <div style={{
-                fontFamily: 'Nunito', fontWeight: 800, fontSize: 11,
+                fontFamily: 'Caprasimo', fontWeight: 800, fontSize: 11,
                 letterSpacing: '.14em', textTransform: 'uppercase',
-                color: '#D4400A', marginBottom: 18,
+                color: '#f15a28', marginBottom: 18,
               }}>{col}</div>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {links.map(l => (
@@ -82,7 +83,7 @@ export default function Footer() {
           </div>
           <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
             {[20, 14, 10].map((s, i) => (
-              <Bean key={i} w={s} h={s} stroke={`rgba(212,64,10,${1 - i * 0.3})`}/>
+              <Bean key={i} w={s} h={s} stroke={`rgba(241,90,40,${1 - i * 0.3})`}/>
             ))}
           </div>
         </div>

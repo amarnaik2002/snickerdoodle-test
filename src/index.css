@@ -1,15 +1,15 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── BASE ── */
+/* â”€â”€ BASE â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Lora', serif; background: #FFFDF9; overflow-x: hidden; color: #2C1810; }
 
-/* ── TOKENS ── */
+/* â”€â”€ TOKENS â”€â”€ */
 :root {
-  --c-orange:       #D4400A;
+  --c-orange:       #f15a28;
   --c-orange-lt:    #E8622E;
   --c-orange-dk:    #A83008;
   --c-orange-pale:  #F5C9A8;
@@ -27,19 +27,19 @@ body { font-family: 'Lora', serif; background: #FFFDF9; overflow-x: hidden; colo
   --ease-out:       cubic-bezier(.16,1,.3,1);
 }
 
-/* ── SCROLLBAR ── */
+/* â”€â”€ SCROLLBAR â”€â”€ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--c-cream); }
 ::-webkit-scrollbar-thumb { background: var(--c-orange); border-radius: 3px; }
 
-/* ── GRAIN TEXTURE ── */
+/* â”€â”€ GRAIN TEXTURE â”€â”€ */
 .grain-overlay {
   position: absolute; inset: 0; pointer-events: none; z-index: 2;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
   opacity: .55; mix-blend-mode: overlay;
 }
 
-/* ── KEYFRAMES ── */
+/* â”€â”€ KEYFRAMES â”€â”€ */
 @keyframes float {
   0%,100% { transform: translateY(0) rotate(var(--r,0deg)); }
   50%      { transform: translateY(-14px) rotate(var(--r,0deg)); }
@@ -60,7 +60,7 @@ body { font-family: 'Lora', serif; background: #FFFDF9; overflow-x: hidden; colo
 .steam-2 { animation: steam 2.2s ease-out infinite .7s; }
 .steam-3 { animation: steam 2.2s ease-out infinite 1.4s; }
 
-/* ── STAMP BADGE ── */
+/* â”€â”€ STAMP BADGE â”€â”€ */
 .stamp {
   border: 2.5px solid rgba(255,253,249,.88);
   outline: 1.5px solid rgba(255,253,249,.28);
@@ -68,46 +68,63 @@ body { font-family: 'Lora', serif; background: #FFFDF9; overflow-x: hidden; colo
   border-radius: 999px;
 }
 
-/* ── NAV ── */
+/* -- TYPOGRAPHY REFINEMENTS -- */
+h2 { text-wrap: balance; }
+.price { font-variant-numeric: tabular-nums; }
+
+/* -- CUSTOM FONTS -- */
+@font-face {
+  font-family: 'Breathing';
+  src: url('/src/assets/Breathing.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* â”€â”€ NAV â”€â”€ */
+@keyframes navSlideIn {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
 .nav-scrolled {
-  background: #FFFDF9 !important;
+  background: #f8f1e9 !important;
   box-shadow: 0 2px 24px rgba(30,10,4,.08) !important;
 }
 
-/* ── MENU CARD ── */
+/* â”€â”€ MENU CARD â”€â”€ */
 .menu-card {
-  transition: transform .3s var(--ease-bounce), box-shadow .3s ease;
+  transition: transform .35s var(--ease-bounce), box-shadow .35s ease;
 }
 .menu-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 24px 48px rgba(30,10,4,.14);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(30,10,4,.16);
 }
 .add-btn {
   transition: transform .2s var(--ease-bounce), background .15s;
 }
 .add-btn:hover { transform: scale(1.18); background: var(--c-orange-lt) !important; }
 
-/* ── LOCATION CARD ── */
+/* â”€â”€ LOCATION CARD â”€â”€ */
 .loc-card { transition: box-shadow .25s, transform .25s var(--ease-bounce); }
 .loc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,10,4,.10); }
 
-/* ── LOYALTY INPUT ── */
+/* â”€â”€ LOYALTY INPUT â”€â”€ */
 .loyalty-input { transition: border-color .2s, box-shadow .2s; }
 .loyalty-input:focus {
   outline: none;
   border-color: var(--c-orange) !important;
-  box-shadow: 0 0 0 3px rgba(212,64,10,.22);
+  box-shadow: 0 0 0 3px rgba(241,90,40,.22);
 }
 .loyalty-input::placeholder { color: rgba(196,160,144,.5); }
 
-/* ── CTA BUTTONS ── */
-.btn-bounce { transition: transform .2s var(--ease-bounce), box-shadow .2s; }
-.btn-bounce:hover  { transform: scale(1.05); }
+/* â”€â”€ CTA BUTTONS â”€â”€ */
+.btn-bounce { transition: transform .2s var(--ease-bounce), box-shadow .2s, background .15s; }
+.btn-bounce:hover  { transform: scale(1.05); box-shadow: 0 8px 28px rgba(241,90,40,.45); }
 .btn-bounce:active { transform: scale(.97); }
 
-/* ── SECTION TITLE FADE ── */
+/* â”€â”€ SECTION TITLE FADE â”€â”€ */
 .will-fade { opacity: 0; transform: translateY(40px); }
 
-/* ── FOOTER LINK ── */
+/* â”€â”€ FOOTER LINK â”€â”€ */
 .footer-link { transition: color .15s; }
 .footer-link:hover { color: var(--c-orange-pale) !important; }

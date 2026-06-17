@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Copy-Item -Path \"c:\\\\Users\\\\ADMIN\\\\Desktop\\\\old logo.png\" -Destination \"C:\\\\Users\\\\ADMIN\\\\snickerdoodle-react\\\\src\\\\assets\\\\logo-nav.png\" -Force)",
+      "Bash(Copy-Item -Path \"c:\\\\Users\\\\ADMIN\\\\Desktop\\\\logo.png\" -Destination \"C:\\\\Users\\\\ADMIN\\\\snickerdoodle-react\\\\src\\\\assets\\\\logo-white.png\" -Force)",
+      "Bash(Write-Output \"Done\")",
+      "Skill(canvas-design)",
+      "Skill(run)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174)",
+      "Bash(git rm *)",
+      "Bash(python *)",
+      "Bash(del fix_hours.py)",
+      "Bash(curl *)"
+    ]
+  }
+}

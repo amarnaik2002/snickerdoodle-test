@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+﻿import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MA } from '../utils/motion'
@@ -12,8 +12,8 @@ function Stat({ end, suffix, label, go }) {
   return (
     <div style={{ textAlign: 'center', padding: '8px 0' }}>
       <div style={{
-        fontFamily: 'Nunito', fontWeight: 900,
-        fontSize: 'clamp(38px,5vw,56px)', color: '#D4400A', lineHeight: 1,
+        fontFamily: 'Caprasimo', fontWeight: 900,
+        fontSize: 'clamp(38px,5vw,56px)', color: '#f15a28', lineHeight: 1,
       }}>{n.toLocaleString()}{suffix}</div>
       <div style={{
         fontFamily: 'Lora', fontSize: 14, fontStyle: 'italic',
@@ -59,28 +59,28 @@ export default function OurStory() {
           <div className="story-l" style={{ textAlign: 'center' }}>
             <div style={{
               fontFamily: 'Dancing Script', fontWeight: 700,
-              fontSize: 'clamp(60px,8vw,100px)', color: '#D4400A',
+              fontSize: 'clamp(60px,8vw,100px)', color: '#f15a28',
               lineHeight: .85, display: 'inline-block', transform: 'rotate(-5deg)',
             }}>est.</div>
             <div style={{
-              fontFamily: 'Nunito', fontWeight: 900,
+              fontFamily: 'Caprasimo', fontWeight: 900,
               fontSize: 'clamp(50px,7vw,86px)', color: '#2C1810',
               lineHeight: 1, letterSpacing: '-.02em',
             }}>2019</div>
             <div style={{ marginTop: 22, display: 'flex', justifyContent: 'center', gap: 10 }}>
-              <Bean w={36} h={36} stroke="#D4400A"/>
-              <Bean w={24} h={24} stroke="rgba(212,64,10,.4)"/>
-              <Bean w={18} h={18} stroke="rgba(212,64,10,.25)"/>
+              <Bean w={36} h={36} stroke="#f15a28"/>
+              <Bean w={24} h={24} stroke="rgba(241,90,40,.4)"/>
+              <Bean w={18} h={18} stroke="rgba(241,90,40,.25)"/>
             </div>
           </div>
 
           {/* Right */}
           <div className="story-r">
-            <div style={{ fontFamily: 'Dancing Script', fontSize: 22, color: '#D4400A', fontWeight: 600, marginBottom: 10 }}>
+            <div style={{ fontFamily: 'Dancing Script', fontSize: 22, color: '#f15a28', fontWeight: 600, marginBottom: 10 }}>
               our story
             </div>
             <h2 style={{
-              fontFamily: 'Nunito', fontWeight: 900,
+              fontFamily: 'Caprasimo', fontWeight: 900,
               fontSize: 'clamp(28px,4vw,46px)', color: '#2C1810',
               lineHeight: 1.08, marginBottom: 20,
             }}>
@@ -89,9 +89,9 @@ export default function OurStory() {
 
             {/* Divider with bean */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 22 }}>
-              <div style={{ flex: 1, height: 1.5, background: 'rgba(212,64,10,.25)' }}/>
-              <Bean w={18} h={18} stroke="#D4400A"/>
-              <div style={{ flex: 1, height: 1.5, background: 'rgba(212,64,10,.25)' }}/>
+              <div style={{ flex: 1, height: 1.5, background: 'rgba(241,90,40,.25)' }}/>
+              <Bean w={18} h={18} stroke="#f15a28"/>
+              <div style={{ flex: 1, height: 1.5, background: 'rgba(241,90,40,.25)' }}/>
             </div>
 
             <p style={{
@@ -106,9 +106,9 @@ export default function OurStory() {
             <MA href="#" hover={{ x: 6 }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
-                marginTop: 28, fontFamily: 'Nunito', fontWeight: 800,
+                marginTop: 28, fontFamily: 'Caprasimo', fontWeight: 800,
                 fontSize: 13, letterSpacing: '.1em', textTransform: 'uppercase',
-                color: '#D4400A', textDecoration: 'none',
+                color: '#f15a28', textDecoration: 'none',
               }}>
               Read Our Full Story
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -128,7 +128,7 @@ export default function OurStory() {
           gap: '0 32px', alignItems: 'center',
         }}>
           {[
-            { end: 12000, suffix: '+', label: 'cups served this year' },
+            { end: 11847, suffix: '+', label: 'cups served this year' },
             { end: 3,     suffix: '',  label: 'neighbourhood locations' },
             { end: 100,   suffix: '%', label: 'direct trade beans' },
             { end: 6,     suffix: '',  label: 'years of craft' },

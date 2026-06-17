@@ -1,4 +1,4 @@
-export const Cup = ({ w = 56, h = 56, stroke = '#D4400A', sw = 1.8 }) => (
+﻿export const Cup = ({ w = 56, h = 56, stroke = '#f15a28', sw = 1.8 }) => (
   <svg width={w} height={h} viewBox="0 0 56 56" fill="none"
     stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={sw}>
     <path d="M10 20h36l-5 28H15L10 20z"/>
@@ -9,7 +9,7 @@ export const Cup = ({ w = 56, h = 56, stroke = '#D4400A', sw = 1.8 }) => (
   </svg>
 )
 
-export const Bean = ({ w = 32, h = 32, stroke = '#D4400A', sw = 1.8 }) => (
+export const Bean = ({ w = 32, h = 32, stroke = '#f15a28', sw = 1.8 }) => (
   <svg width={w} height={h} viewBox="0 0 36 36" fill="none"
     stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={sw}>
     <ellipse cx="18" cy="18" rx="10" ry="15" transform="rotate(-20 18 18)"/>
@@ -17,7 +17,7 @@ export const Bean = ({ w = 32, h = 32, stroke = '#D4400A', sw = 1.8 }) => (
   </svg>
 )
 
-export const Croissant = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
+export const Croissant = ({ w = 72, h = 72, stroke = '#f15a28', sw = 1.8 }) => (
   <svg width={w} height={h} viewBox="0 0 72 72" fill="none"
     stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={sw}>
     <path d="M10 50C8 38 16 16 36 16s28 22 26 34c-5 14-15 18-26 18S15 64 10 50z"/>
@@ -27,7 +27,7 @@ export const Croissant = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
   </svg>
 )
 
-export const Latte = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
+export const Latte = ({ w = 72, h = 72, stroke = '#f15a28', sw = 1.8 }) => (
   <svg width={w} height={h} viewBox="0 0 72 72" fill="none"
     stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={sw}>
     <rect x="12" y="24" width="46" height="36" rx="6"/>
@@ -39,7 +39,7 @@ export const Latte = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
   </svg>
 )
 
-export const ColdBrew = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
+export const ColdBrew = ({ w = 72, h = 72, stroke = '#f15a28', sw = 1.8 }) => (
   <svg width={w} height={h} viewBox="0 0 72 72" fill="none"
     stroke={stroke} strokeLinecap="round" strokeLinejoin="round" strokeWidth={sw}>
     <path d="M20 14h32L46 56H26L20 14z"/>
@@ -56,7 +56,7 @@ export const ColdBrew = ({ w = 72, h = 72, stroke = '#D4400A', sw = 1.8 }) => (
 
 export const MapPin = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-    stroke="#D4400A" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+    stroke="#f15a28" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
     <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
     <circle cx="12" cy="10" r="3"/>
   </svg>
