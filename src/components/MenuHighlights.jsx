@@ -2,33 +2,35 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Btn } from '../utils/motion'
-
-gsap.registerPlugin(ScrollTrigger)
+import menuFeatured from '../assets/menu-1.jpg'
+import menuSide1    from '../assets/menu-2.jpg'
+import menuSide2    from '../assets/menu-3.jpg'
+import menuSide3    from '../assets/menu-4.jpg'
 
 const MENU = [
   {
-    name: 'Double Espresso',
-    desc: 'Two ristretto shots. Velvety, bold, and bright.',
-    price: '$3.80', badge: 'Classic',
-    photo: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&h=700&q=80',
+    name: 'House Mac & Cheese',
+    desc: 'Bubbling baked mac smothered in our signature cheese sauce — comfort in every bite.',
+    price: '₹349', badge: 'Fan Fav',
+    photo: menuFeatured,
   },
   {
-    name: 'Oat Milk Latte',
-    desc: 'Silky micro-foam over our house single-origin.',
-    price: '$5.50', badge: 'Popular',
-    photo: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=400&q=80',
+    name: 'Butter Croissant & Latte',
+    desc: 'Flaky, golden croissant paired with our velvety house latte.',
+    price: '₹299', badge: 'Classic',
+    photo: menuSide1,
   },
   {
-    name: 'Butter Croissant',
-    desc: 'Laminated dough, baked fresh before 5am.',
-    price: '$4.20', badge: 'Fresh',
-    photo: 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=600&h=400&q=80',
+    name: 'Strawberry Pancakes',
+    desc: 'Fluffy stacks loaded with fresh strawberries and a dusting of sugar.',
+    price: '₹279', badge: 'Popular',
+    photo: menuSide2,
   },
   {
-    name: 'Iced Cold Brew',
-    desc: '18-hour steep, poured over Japanese clear ice.',
-    price: '$6.00', badge: 'New',
-    photo: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&h=400&q=80',
+    name: 'Signature Pizza',
+    desc: 'Crisp thin base, loaded with toppings and a serious cheese pull.',
+    price: '₹399', badge: 'New',
+    photo: menuSide3,
   },
 ]
 
@@ -149,11 +151,11 @@ export default function MenuHighlights() {
   }, [])
 
   return (
-    <section ref={ref} style={{ background: '#FFFDF9', padding: '100px 64px', borderTop: '1px solid #EDD9BE' }}>
+    <section ref={ref} className="section-pad" style={{ background: '#FFFDF9', padding: '100px 64px', borderTop: '1px solid #EDD9BE' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
         {/* Split header: title left, desc + CTA right */}
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 40, marginBottom: 44 }}>
+        <div className="menu-header" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 40, marginBottom: 44 }}>
           <div className="menu-intro">
             <div style={{ fontFamily: 'Dancing Script', fontSize: 22, color: '#f15a28', fontWeight: 600, marginBottom: 6 }}>
               from our kitchen
@@ -170,6 +172,7 @@ export default function MenuHighlights() {
             </p>
             <Btn
               hover={{ scale: 1.04 }} tap={{ scale: .97 }}
+              onClick={() => window.open('/menu.pdf', '_blank', 'noopener,noreferrer')}
               style={{
                 background: 'transparent', color: '#f15a28',
                 border: '2px solid #f15a28',

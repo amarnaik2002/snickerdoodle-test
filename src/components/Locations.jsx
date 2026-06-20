@@ -3,30 +3,45 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MA } from '../utils/motion'
 import { MapPin, Clock } from '../icons'
-
-gsap.registerPlugin(ScrollTrigger)
+import locKalyan     from '../assets/carousel-2.jpg'
+import locAmbarnath  from '../assets/loc-ambarnath.jpg'
+import locSoon       from '../assets/carousel-7.jpg'
 
 const LOCS = [
   {
-    name:  'The West End',
-    addr:  '42 Hazel Street, West End',
-    hours: 'Mon-Fri 6am-5pm / Sat-Sun 7am-4pm',
-    tags:  ['Dine In', 'Takeaway', 'Dog Friendly'],
-    photo: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&h=300&q=80',
+    name:     'Kalyan Outlet',
+    subtitle: 'Snickerdoodle Coffeeworks',
+    addr:     'Shop No. 3, The Hayer Premium, Opp. The Work House, Rambaug Lane No. 6, Behind Mhaskar Hospital, Kalyan – 421301',
+    hours:    'Mon–Sun 9am–10pm',
+    email:    'yousnickerdoodle@gmail.com',
+    phone:    '+91 9860032615',
+    tags:     ['Dine In', 'Takeaway', 'Coffee Bar'],
+    mapsUrl:  'https://maps.app.goo.gl/ZD3YYSsDLLS8Wzjg8',
+    photo:    locKalyan,
+    comingSoon: false,
   },
   {
-    name:  'Fortitude Valley',
-    addr:  '118 Ann Street, Fortitude Valley',
-    hours: 'Mon-Fri 6:30am-6pm / Sat 7am-5pm',
-    tags:  ['Dine In', 'Takeaway', 'Late Hours'],
-    photo: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&h=300&q=80',
+    name:     'Ambarnath Outlet',
+    subtitle: 'Snickerdoodle – Virgin Bar and Café',
+    addr:     'Shop No. 3, Opp. PNB, Shiv Mandir Road, Swami Samarth Chowk, Ambernath East, Kher Section, Maharashtra – 421501',
+    hours:    'Mon–Sun 9am–10pm',
+    email:    'yousnickerdoodle@gmail.com',
+    phone:    '+91 7378883322',
+    tags:     ['Dine In', 'Takeaway', 'Bar & Café'],
+    mapsUrl:  'https://www.google.com/maps/search/?api=1&query=Snickerdoodle+Virgin+Bar+Cafe+Shiv+Mandir+Road+Swami+Samarth+Chowk+Ambernath+East+Maharashtra+421501',
+    photo:    locAmbarnath,
+    comingSoon: false,
   },
   {
-    name:  'New Farm',
-    addr:  '7 Brunswick Street, New Farm',
-    hours: 'Mon-Sun 7am-3pm',
-    tags:  ['Dine In', 'Takeaway', 'Garden Seats'],
-    photo: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&h=300&q=80',
+    name:     'New Outlet',
+    subtitle: 'Coming Soon',
+    addr:     'We\'re brewing something special in a brand new neighbourhood. Stay tuned — good things take time.',
+    hours:    'Opening Soon',
+    email:    '',
+    tags:     ['Stay Tuned', 'New Location'],
+    mapsUrl:  'https://maps.app.goo.gl/kJWaqu53p7FZJLiF7',
+    photo:    locSoon,
+    comingSoon: true,
   },
 ]
 
@@ -130,9 +145,9 @@ export default function Locations() {
       {/* â”€â”€ Banner â”€â”€ */}
       <div
         ref={bannerRef}
+        className="loc-banner"
         style={{
           background: '#FAF0E6',
-          // borderTop: ' #f15a28',
           padding: '72px 64px',
           position: 'relative',
           overflow: 'hidden',
@@ -142,7 +157,7 @@ export default function Locations() {
         }}
       >
         {/* left flourish */}
-        <div style={{
+        <div className="loc-flourish" style={{
           position: 'absolute', left: '8%', top: '50%', transform: 'translateY(-50%)',
         }}>
           <SwirlyArrow />
@@ -182,9 +197,14 @@ export default function Locations() {
           </div>
 
           <div className="loc-banner-btn" style={{ marginTop: 28 }}>
-            <a
-              href="#locs-grid"
+            <button
               className="btn-bounce"
+              onClick={() => {
+                const el = document.getElementById('locs-grid')
+                if (!el) return
+                if (window.__lenis) window.__lenis.scrollTo(el, { offset: -80 })
+                else el.scrollIntoView({ behavior: 'smooth' })
+              }}
               style={{
                 display: 'inline-block',
                 background: '#f15a28',
@@ -193,19 +213,19 @@ export default function Locations() {
                 fontSize: 14,
                 letterSpacing: '.14em',
                 textTransform: 'uppercase',
-                textDecoration: 'none',
+                border: 'none',
                 padding: '14px 44px',
                 borderRadius: 6,
                 boxShadow: '0 6px 24px rgba(241,90,40,.4)',
               }}
             >
               FIND US
-            </a>
+            </button>
           </div>
         </div>
 
         {/* right stamp */}
-        <div style={{
+        <div className="loc-flourish" style={{
           position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)',
         }}>
           <GlobalStamp />
@@ -213,7 +233,7 @@ export default function Locations() {
       </div>
 
       {/* â”€â”€ Location Cards â”€â”€ */}
-      <div id="locs-grid" style={{ background: '#FFFDF9', padding: '100px 64px' }}>
+      <div id="locs-grid" className="section-pad" style={{ background: '#FFFDF9', padding: '100px 64px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
           <div className="loc-section-title" style={{ textAlign: 'center', marginBottom: 56 }}>
@@ -230,57 +250,97 @@ export default function Locations() {
             {LOCS.map(loc => (
               <div key={loc.name} className="loc-card" style={{
                 background: '#FFFDF9', borderRadius: 20,
-                border: '1.5px solid #EDD9BE',
+                border: loc.comingSoon ? '1.5px dashed #EDD9BE' : '1.5px solid #EDD9BE',
                 overflow: 'hidden',
                 boxShadow: '0 2px 14px rgba(30,10,4,.05)',
+                opacity: loc.comingSoon ? 0.82 : 1,
               }}>
                 {/* Photo header */}
-                <div style={{ height: 160, overflow: 'hidden' }}>
+                <div style={{ height: 160, overflow: 'hidden', position: 'relative' }}>
                   <img src={loc.photo} alt={loc.name} loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block',
-                      transition: 'transform .5s ease' }}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.06)' }}
+                      transition: 'transform .5s ease',
+                      filter: loc.comingSoon ? 'blur(2px) brightness(0.7)' : 'none' }}
+                    onMouseEnter={e => { if (!loc.comingSoon) e.currentTarget.style.transform = 'scale(1.06)' }}
                     onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)' }}
                   />
+                  {loc.comingSoon && (
+                    <div style={{
+                      position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <span style={{
+                        fontFamily: 'Caprasimo', fontWeight: 900, fontSize: 18,
+                        color: '#fff', letterSpacing: '.1em', textTransform: 'uppercase',
+                        background: '#f15a28', padding: '6px 18px', borderRadius: 999,
+                        boxShadow: '0 4px 16px rgba(241,90,40,.5)',
+                      }}>Coming Soon</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Card content */}
                 <div style={{ padding: '22px 24px 24px' }}>
-                <div style={{ display: 'flex', gap: 10, marginBottom: 14 }}>
-                  <div style={{ marginTop: 2, flexShrink: 0 }}><MapPin/></div>
-                  <div>
-                    <div style={{ fontFamily: 'Caprasimo', fontWeight: 800, fontSize: 18, color: '#2C1810' }}>{loc.name}</div>
-                    <div style={{ fontFamily: 'Lora', fontSize: 13, color: '#9E6B54', fontStyle: 'italic', marginTop: 2 }}>{loc.addr}</div>
+                  <div style={{ display: 'flex', gap: 10, marginBottom: 14 }}>
+                    <div style={{ marginTop: 2, flexShrink: 0 }}><MapPin/></div>
+                    <div>
+                      <div style={{ fontFamily: 'Caprasimo', fontWeight: 800, fontSize: 18, color: '#2C1810' }}>{loc.name}</div>
+                      {loc.subtitle && (
+                        <div style={{ fontFamily: 'Dancing Script', fontSize: 14, color: '#f15a28', fontWeight: 600, marginTop: 1 }}>{loc.subtitle}</div>
+                      )}
+                      <div style={{ fontFamily: 'Lora', fontSize: 12, color: '#9E6B54', fontStyle: 'italic', marginTop: 4, lineHeight: 1.55 }}>{loc.addr}</div>
+                    </div>
                   </div>
-                </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 16 }}>
-                  <Clock/>
-                  <span style={{ fontFamily: 'Lora', fontSize: 12, color: '#9E6B54', fontStyle: 'italic' }}>{loc.hours}</span>
-                </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
+                    <Clock/>
+                    <span style={{ fontFamily: 'Lora', fontSize: 12, color: '#9E6B54', fontStyle: 'italic' }}>{loc.hours}</span>
+                  </div>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 24 }}>
-                  {loc.tags.map(t => (
-                    <span key={t} style={{
-                      fontFamily: 'Caprasimo', fontWeight: 700, fontSize: 11,
-                      background: '#FAE8DC', color: '#A83008',
-                      padding: '3px 11px', borderRadius: 999,
-                    }}>{t}</span>
-                  ))}
-                </div>
+                  {loc.phone && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9E6B54" strokeWidth="2" strokeLinecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      <a href={`tel:${loc.phone.replace(/\s/g,'')}`} style={{ fontFamily: 'Lora', fontSize: 12, color: '#9E6B54', fontStyle: 'italic', textDecoration: 'none' }}>{loc.phone}</a>
+                    </div>
+                  )}
 
-                <MA href="#" hover={{ x: 5 }}
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                    fontFamily: 'Caprasimo', fontWeight: 700, fontSize: 12,
-                    letterSpacing: '.08em', textTransform: 'uppercase',
-                    color: '#f15a28', textDecoration: 'none',
-                  }}>
-                  Get Directions
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </MA>
+                  {loc.email && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 16 }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9E6B54" strokeWidth="2" strokeLinecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+                      <a href={`mailto:${loc.email}`} style={{ fontFamily: 'Lora', fontSize: 12, color: '#9E6B54', fontStyle: 'italic', textDecoration: 'none' }}>{loc.email}</a>
+                    </div>
+                  )}
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 24 }}>
+                    {loc.tags.map(t => (
+                      <span key={t} style={{
+                        fontFamily: 'Caprasimo', fontWeight: 700, fontSize: 11,
+                        background: '#FAE8DC', color: '#A83008',
+                        padding: '3px 11px', borderRadius: 999,
+                      }}>{t}</span>
+                    ))}
+                  </div>
+
+                  {loc.mapsUrl ? (
+                    <MA
+                      href={loc.mapsUrl}
+                      target="_blank" rel="noopener noreferrer"
+                      hover={{ x: 5 }}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 6,
+                        fontFamily: 'Caprasimo', fontWeight: 700, fontSize: 12,
+                        letterSpacing: '.08em', textTransform: 'uppercase',
+                        color: '#f15a28', textDecoration: 'none',
+                      }}>
+                      Get Directions
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </MA>
+                  ) : (
+                    <div style={{ fontFamily: 'Lora', fontSize: 12, color: '#C4A090', fontStyle: 'italic' }}>
+                      Stay tuned for updates ✦
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

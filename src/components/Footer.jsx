@@ -12,10 +12,10 @@ const FOOTER_LINKS = {
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1E0A04', padding: '80px 64px 44px' }}>
+    <footer className="footer-wrap" style={{ background: '#1E0A04', padding: '80px 64px 44px' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.8fr repeat(4,1fr)', gap: 56, marginBottom: 64 }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.8fr repeat(4,1fr)', gap: 56, marginBottom: 64 }}>
 
           {/* Brand */}
           <div>

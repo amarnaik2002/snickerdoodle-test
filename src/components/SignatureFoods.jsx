@@ -2,8 +2,6 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const FOODS = [
   {
     name: 'Brekky Wrap',
@@ -102,13 +100,13 @@ export default function SignatureFoods() {
   }, [])
 
   return (
-    <section ref={ref} style={{ background: '#FAF0E6', padding: '100px 64px', borderTop: '1px solid #EDD9BE' }}>
+    <section ref={ref} className="section-pad" style={{ background: '#FAF0E6', padding: '100px 64px', borderTop: '1px solid #EDD9BE' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         {/* Heading */}
         <div className="sig-heading" style={{ textAlign: 'center', marginBottom: 72, position: 'relative' }}>
 
-          {/* steam cup â€“ left deco */}
+          {/* steam cup — left deco */}
           <div style={{ position: 'absolute', left: '18%', top: 4, opacity: .8 }}>
             <svg width="48" height="50" viewBox="0 0 48 50" fill="none">
               <path d="M10 22 Q10 38 24 38 Q38 38 38 22 Z" stroke="#2C1810" strokeWidth="1.6" fill="none"/>
@@ -120,7 +118,7 @@ export default function SignatureFoods() {
             </svg>
           </div>
 
-          {/* baguette â€“ right deco */}
+          {/* baguette — right deco */}
           <div style={{ position: 'absolute', right: '18%', top: 8, opacity: .8 }}>
             <svg width="58" height="34" viewBox="0 0 58 34" fill="none">
               <ellipse cx="29" cy="17" rx="27" ry="14" stroke="#2C1810" strokeWidth="1.6" fill="none"/>

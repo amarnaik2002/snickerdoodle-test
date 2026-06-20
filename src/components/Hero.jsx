@@ -1,7 +1,9 @@
 ﻿import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import icedCoffee from '../assets/icedcoffee.png'
 import doodles from '../assets/doodles.png'
+import img4 from '../assets/4.png'
+import img1 from '../assets/1.png'
+import img8 from '../assets/8.png'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -13,7 +15,10 @@ export default function Hero() {
         stagger: .14, ease: 'power4.out', delay: .5,
       })
       gsap.from('.h-sub', { y: 28, opacity: 0, duration: .75, ease: 'power3.out', delay: 1.1 })
-      gsap.from('.h-cup', { x: 80, opacity: 0, duration: 1.1, ease: 'power3.out', delay: .7 })
+      gsap.from('.h-img1',   { x: 80,  opacity: 0, duration: 1.1, ease: 'power3.out', delay: .7 })
+      gsap.from('.h-img8',   { x: 80,  y: 40, opacity: 0, duration: 1.1, ease: 'power3.out', delay: .9 })
+      gsap.from('.h-doodle', { x: -60, opacity: 0, duration: 1,   ease: 'power3.out', delay: .6 })
+      gsap.from('.h-img4',   { x: -60, opacity: 0, duration: 1,   ease: 'power3.out', delay: .8 })
     }, ref)
     return () => ctx.revert()
   }, [])
@@ -26,9 +31,8 @@ export default function Hero() {
     }}>
       <div className="grain-overlay"/>
 
-      {/* Floating iced coffee cup â€” GSAP handles the float so mix-blend-mode composites correctly */}
-      {/* Doodle croissant */}
-      <div className="anim-floatB" style={{
+      {/* Doodle croissant — bottom left */}
+      <div className="h-doodle" style={{
         position: 'absolute',
         left: '3%',
         bottom: '12%',
@@ -38,34 +42,79 @@ export default function Hero() {
         <img
           src={doodles}
           alt="Illustrated croissant"
+          className="anim-floatB"
           style={{
+            '--r': '-12deg',
             width: 'clamp(140px, 16vw, 240px)',
             height: 'auto',
             display: 'block',
-            transform: 'rotate(-12deg)',
             filter: 'drop-shadow(0 12px 28px rgba(30,10,4,.22))',
           }}
         />
       </div>
 
-      <div className="h-cup" style={{
+      {/* img1 — upper right */}
+      <div className="h-img1" style={{
         position: 'absolute',
-        right: '5%',
-        top: '50%',
-        transform: 'translateY(-50%)',
+        right: '4%',
+        top: '10%',
         zIndex: 4,
         pointerEvents: 'none',
       }}>
         <img
-          src={icedCoffee}
-          alt="Iced coffee"
-          fetchPriority="high"
+          src={img1}
+          alt=""
+          className="anim-float"
           style={{
-            width: 'auto',
-            height: 'clamp(460px, 80vh, 720px)',
+            '--r': '-8deg',
+            width: 'clamp(160px, 18vw, 280px)',
+            height: 'auto',
             display: 'block',
-            transform: 'rotate(8deg)',
-            filter: 'drop-shadow(0 20px 40px rgba(30,10,4,.3))',
+            filter: 'drop-shadow(0 16px 32px rgba(30,10,4,.28))',
+          }}
+        />
+      </div>
+
+      {/* img8 — lower right */}
+      <div className="h-img8" style={{
+        position: 'absolute',
+        right: '6%',
+        bottom: '10%',
+        zIndex: 4,
+        pointerEvents: 'none',
+      }}>
+        <img
+          src={img8}
+          alt=""
+          className="anim-floatB"
+          style={{
+            '--r': '10deg',
+            width: 'clamp(150px, 17vw, 260px)',
+            height: 'auto',
+            display: 'block',
+            filter: 'drop-shadow(0 16px 32px rgba(30,10,4,.28))',
+          }}
+        />
+      </div>
+
+      {/* Image 4 — near title */}
+      <div className="h-img4" style={{
+        position: 'absolute',
+        left: '10%',
+        top: '14%',
+        zIndex: 4,
+        pointerEvents: 'none',
+      }}>
+        <img
+          src={img4}
+          alt=""
+          className="anim-floatB"
+          style={{
+            '--r': '10deg',
+            width: 'clamp(110px, 13vw, 200px)',
+            height: 'auto',
+            display: 'block',
+            filter: 'drop-shadow(0 12px 28px rgba(30,10,4,.25))',
           }}
         />
       </div>

@@ -16,10 +16,10 @@ export const Btn = ({ children, hover, tap, style, className, onClick, type }) =
   )
 }
 
-export const MA = ({ children, hover, style, className, href }) => {
+export const MA = ({ children, hover, style, className, href, ...rest }) => {
   const M = motion.a
   return (
-    <M href={href} whileHover={hover} style={style} className={className}>
+    <M href={href} whileHover={hover} style={style} className={className} {...rest}>
       {children}
     </M>
   )

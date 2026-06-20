@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<title>You're on the list!</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing:border-box; }
+  body, table, td, p, a, li { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; }
+
+  body { margin:0; padding:0; background:#F2EAE0; width:100% !important; }
+
+  @media screen and (max-width:620px) {
+    .email-wrapper  { padding:0 !important; }
+    .email-card     { border-radius:0 !important; width:100% !important; }
+    .email-header   { padding:44px 22px 38px !important; }
+    .email-body     { padding:36px 22px 32px !important; }
+    .email-footer   { padding:26px 22px !important; }
+
+    h1.hero-line    { font-size:36px !important; letter-spacing:-0.5px !important; }
+
+    /* Step accent bar stays fixed-width — no change needed; text cell stretches */
+
+    /* Contact row → stack */
+    .contact-row td { display:block !important; width:100% !important;
+                      padding:8px 0 !important; text-align:center !important; }
+    .contact-dot    { display:none !important; }
+
+    /* CTA full-width */
+    .cta-wrap       { width:100% !important; }
+    .cta-wrap td    { border-radius:8px !important; }
+    .cta-wrap a     { display:block !important; padding:16px 20px !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#F2EAE0;width:100%;">
+
+<!--[if mso]>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
+<![endif]-->
+
+<table class="email-wrapper" role="presentation" width="100%" cellpadding="0" cellspacing="0"
+  style="background:#F2EAE0;padding:40px 16px;">
+<tr><td align="center">
+
+  <table class="email-card" role="presentation" width="600" cellpadding="0" cellspacing="0"
+    style="max-width:600px;width:100%;border-radius:20px;overflow:hidden;
+           box-shadow:0 8px 48px rgba(44,24,16,0.15);">
+
+    <!-- ── HEADER ── -->
+    <tr>
+      <td class="email-header" style="background:#f15a28;padding:56px 48px 48px;text-align:center;">
+        <div style="width:36px;height:2px;background:rgba(255,253,249,0.35);margin:0 auto 26px;"></div>
+        <p style="margin:0 0 10px;font-family:'DM Sans',Arial,sans-serif;font-size:11px;
+                  font-weight:500;letter-spacing:4px;text-transform:uppercase;
+                  color:rgba(255,253,249,0.58);">Snickerdoodle Coffeeworks</p>
+        <h1 class="hero-line" style="margin:0 0 4px;font-family:'Playfair Display',Georgia,serif;
+                   font-size:44px;font-weight:700;color:#FFFDF9;line-height:1.08;letter-spacing:-1px;">
+          You're on
+        </h1>
+        <h1 class="hero-line" style="margin:0 0 18px;font-family:'Playfair Display',Georgia,serif;
+                   font-size:44px;font-weight:700;color:#1E0A04;line-height:1.08;letter-spacing:-1px;">
+          the list.
+        </h1>
+        <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:16px;
+                  font-style:italic;color:rgba(255,253,249,0.88);">
+          We'll be in touch within 24&nbsp;hours. 🎉
+        </p>
+        <div style="width:36px;height:2px;background:rgba(255,253,249,0.35);margin:26px auto 0;"></div>
+      </td>
+    </tr>
+
+    <!-- ── BODY ── -->
+    <tr>
+      <td class="email-body" style="background:#FFFDF9;padding:52px 48px 44px;">
+
+        <!-- Greeting -->
+        <p style="margin:0 0 6px;font-family:'Playfair Display',Georgia,serif;
+                  font-size:27px;font-weight:700;color:#2C1810;">Hello, {{to_name}}.</p>
+        <div style="width:44px;height:2px;background:#f15a28;margin:0 0 22px;"></div>
+
+        <p style="margin:0 0 16px;font-family:'DM Sans',Arial,sans-serif;font-size:15px;
+                  font-weight:400;color:#6B3A2A;line-height:1.82;">
+          We're truly excited to host an event with you at
+          <strong style="font-weight:600;color:#2C1810;">Snickerdoodle Coffeeworks</strong>.
+          Your request has been received and our events team will reach out soon to
+          begin planning something extraordinary.
+        </p>
+        <p style="margin:0 0 36px;font-family:'DM Sans',Arial,sans-serif;font-size:15px;
+                  font-weight:400;color:#6B3A2A;line-height:1.82;">
+          Here's a quick look at what happens next:
+        </p>
+
+        <!-- ── STEPS ── -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:36px;">
+
+          <!-- Step 1 -->
+          <tr>
+            <td style="padding-bottom:12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;overflow:hidden;">
+                <tr>
+                  <td width="64" style="background:#f15a28;text-align:center;vertical-align:middle;
+                                        padding:22px 0;min-width:64px;">
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;
+                              font-size:21px;font-weight:700;color:#FFFDF9;">01</p>
+                  </td>
+                  <td style="padding:20px 22px;vertical-align:middle;">
+                    <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:13px;
+                              font-weight:600;color:#2C1810;">Consultation Call</p>
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:13px;
+                              font-style:italic;color:#9E6B54;line-height:1.6;">
+                      Our events team will reach out to discuss your vision and details.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Step 2 -->
+          <tr>
+            <td style="padding-bottom:12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;overflow:hidden;">
+                <tr>
+                  <td width="64" style="background:#f15a28;text-align:center;vertical-align:middle;
+                                        padding:22px 0;min-width:64px;">
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;
+                              font-size:21px;font-weight:700;color:#FFFDF9;">02</p>
+                  </td>
+                  <td style="padding:20px 22px;vertical-align:middle;">
+                    <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:13px;
+                              font-weight:600;color:#2C1810;">Menu &amp; Theme Selection</p>
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:13px;
+                              font-style:italic;color:#9E6B54;line-height:1.6;">
+                      Choose your curated menu and set the perfect atmosphere.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Step 3 -->
+          <tr>
+            <td>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;overflow:hidden;">
+                <tr>
+                  <td width="64" style="background:#f15a28;text-align:center;vertical-align:middle;
+                                        padding:22px 0;min-width:64px;">
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;
+                              font-size:21px;font-weight:700;color:#FFFDF9;">03</p>
+                  </td>
+                  <td style="padding:20px 22px;vertical-align:middle;">
+                    <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:13px;
+                              font-weight:600;color:#2C1810;">Confirm &amp; Celebrate</p>
+                    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:13px;
+                              font-style:italic;color:#9E6B54;line-height:1.6;">
+                      Secure your date and arrive to a beautifully arranged space.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- Divider -->
+        <div style="width:100%;height:1px;background:#EDD9BE;margin-bottom:26px;"></div>
+
+        <!-- Contact row -->
+        <p style="margin:0 0 16px;font-family:'DM Sans',Arial,sans-serif;font-size:14px;
+                  font-weight:400;color:#6B3A2A;text-align:center;line-height:1.7;">
+          Can't wait? Reach out to us directly:
+        </p>
+        <table class="contact-row" role="presentation" cellpadding="0" cellspacing="0"
+          style="margin:0 auto 36px;">
+          <tr>
+            <td style="text-align:center;padding:0 14px;">
+              <a href="mailto:yousnickerdoodle@gmail.com"
+                style="font-family:'DM Sans',Arial,sans-serif;font-size:12px;font-weight:600;
+                       letter-spacing:0.5px;color:#f15a28;text-decoration:none;">
+                yousnickerdoodle@gmail.com
+              </a>
+            </td>
+            <td class="contact-dot" style="color:#EDD9BE;font-size:18px;line-height:1;padding:0 2px;">·</td>
+            <td style="text-align:center;padding:0 14px;">
+              <a href="tel:+919860032615"
+                style="font-family:'DM Sans',Arial,sans-serif;font-size:12px;font-weight:600;
+                       letter-spacing:0.5px;color:#f15a28;text-decoration:none;">
+                +91 9860 032615
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Disclaimer -->
+        <p style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:12px;
+                  font-weight:300;color:#C4A090;text-align:center;line-height:1.75;">
+          You received this because you submitted an event request on our website.<br/>
+          If this wasn't you, please disregard this email.
+        </p>
+
+      </td>
+    </tr>
+
+    <!-- ── FOOTER ── -->
+    <tr>
+      <td class="email-footer" style="background:#1E0A04;padding:30px 48px;text-align:center;">
+        <div style="width:36px;height:1px;background:rgba(241,90,40,0.42);margin:0 auto 18px;"></div>
+        <p style="margin:0 0 4px;font-family:'Playfair Display',Georgia,serif;font-size:14px;
+                  font-weight:500;font-style:italic;color:rgba(255,253,249,0.52);">
+          roasted with love, served with soul
+        </p>
+        <p style="margin:8px 0 0;font-family:'DM Sans',Arial,sans-serif;font-size:10px;
+                  font-weight:500;letter-spacing:3px;text-transform:uppercase;
+                  color:rgba(255,253,249,0.25);">Snickerdoodle Coffeeworks</p>
+      </td>
+    </tr>
+
+  </table>
+
+</td></tr>
+</table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</body>
+</html>

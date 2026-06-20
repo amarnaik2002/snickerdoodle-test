@@ -1,18 +1,28 @@
-﻿import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import c1 from '../assets/carousel-1.jpg'
+import c2 from '../assets/carousel-2.jpg'
+import c3 from '../assets/carousel-3.jpg'
+import c4 from '../assets/carousel-4.jpg'
+import c5 from '../assets/carousel-5.jpg'
+import c6 from '../assets/carousel-6.jpg'
+import c7 from '../assets/carousel-7.jpg'
+import c8 from '../assets/carousel-8.jpg'
+import c9 from '../assets/carousel-9.jpg'
+import c10 from '../assets/carousel-10.jpg'
 
 const PHOTOS = [
-  { img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=420&h=560&q=80', rot: -6, alt: 'Coffee cup overhead' },
-  { img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=420&h=560&q=80', rot: 4,  alt: 'Latte art' },
-  { img: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=420&h=560&q=80', rot: -3, alt: 'Barista at work' },
-  { img: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=420&h=560&q=80', rot: 5,  alt: 'CafÃ© atmosphere' },
-  { img: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=420&h=560&q=80', rot: -5, alt: 'Coffee beans' },
-  { img: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=420&h=560&q=80', rot: 3,  alt: 'Espresso pour' },
-  { img: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=420&h=560&q=80', rot: -4, alt: 'Cold brew' },
-  { img: 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=420&h=560&q=80', rot: 6,  alt: 'Pastry and coffee' },
+  { img: c1, rot: -6, alt: 'Barista steaming milk' },
+  { img: c2, rot:  4, alt: 'Snickerdoodle cafe counter' },
+  { img: c3, rot: -3, alt: 'Strawberry pancakes' },
+  { img: c4, rot:  5, alt: 'Croissant on branded cup' },
+  { img: c5, rot: -5, alt: 'Tamping espresso' },
+  { img: c6, rot:  3, alt: 'Pizza pull' },
+  { img: c7,  rot: -4, alt: 'Barista preparing coffees' },
+  { img: c8,  rot:  6, alt: 'Staff with croissant' },
+  { img: c9,  rot: -5, alt: 'Founder pouring coffee' },
+  { img: c10, rot:  3, alt: 'Founder tasting coffee' },
 ]
 
 // Duplicate for seamless infinite loop

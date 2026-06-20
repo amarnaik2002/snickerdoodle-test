@@ -3,8 +3,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Btn } from '../utils/motion'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default function LoyaltyBanner() {
   const ref = useRef(null)
   const [focused, setFocused] = useState(false)
@@ -23,7 +21,7 @@ export default function LoyaltyBanner() {
   const beanBg = `url("data:image/svg+xml,%3Csvg width='64' height='64' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='32' cy='32' rx='11' ry='17' transform='rotate(-20 32 32)' fill='none' stroke='rgba(241,90,40,.1)' stroke-width='1.5'/%3E%3Cpath d='M25 17 C30 25 30 39 25 47' fill='none' stroke='rgba(241,90,40,.07)' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E")`
 
   return (
-    <section ref={ref} style={{
+    <section ref={ref} className="section-pad" style={{
       background: '#2C1810',
       backgroundImage: beanBg,
       backgroundSize: '64px 64px',
@@ -64,7 +62,7 @@ export default function LoyaltyBanner() {
           Birthday rewards, early menu access, and barista-only exclusives â€” all yours.
         </p>
 
-        <div style={{ display: 'flex', gap: 10, maxWidth: 480, margin: '0 auto' }}>
+        <div className="loyalty-form" style={{ display: 'flex', gap: 10, maxWidth: 480, margin: '0 auto' }}>
           <input
             type="email"
             placeholder="your@email.com"

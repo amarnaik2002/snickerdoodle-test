@@ -16,7 +16,28 @@
       "Bash(git rm *)",
       "Bash(python *)",
       "Bash(del fix_hours.py)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "PowerShell(python --version; python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "PowerShell(python \"C:\\\\Users\\\\ADMIN\\\\snickerdoodle-react\\\\scripts\\\\remove_bg_4.py\")",
+      "PowerShell(python \"C:\\\\Users\\\\ADMIN\\\\snickerdoodle-react\\\\scripts\\\\remove_bg_all.py\")",
+      "PowerShell(Start-Process -FilePath \"npm\" -ArgumentList \"run\", \"dev\" -WorkingDirectory \"C:\\\\Users\\\\ADMIN\\\\snickerdoodle-react\" -WindowStyle Hidden; Start-Sleep -Seconds 5; Write-Host \"Dev server started\")",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "Bash(npm install *)",
+      "Bash(Read \"C:\\\\Users\\\\ADMIN\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ADMIN-snickerdoodle-react\\\\e599b783-2c55-450b-8589-414e95bcb469\\\\tasks\\\\b5gghh4gh.output\")",
+      "mcp__plugin_playwright_playwright__browser_hover",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/SK-010.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-1.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-66.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-2.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-456.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-3.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/brand-03.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-4.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-33.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-5.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-0166.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-9.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-018.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/carousel-10.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-0144.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/menu-1.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-0011.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/menu-2.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-456.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/menu-3.jpg\")",
+      "Bash(cp \"C:/Users/ADMIN/Desktop/Ass/sk-4653.jpg\" \"C:/Users/ADMIN/snickerdoodle-react/src/assets/menu-4.jpg\")",
+      "Bash(python3 *)"
     ]
   }
 }

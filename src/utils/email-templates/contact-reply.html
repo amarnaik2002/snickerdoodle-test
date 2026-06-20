@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<title>Thanks for reaching out</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  /* Reset */
+  * { box-sizing:border-box; }
+  body, table, td, p, a, li { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; }
+  img { border:0; line-height:100%; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
+
+  body { margin:0; padding:0; background:#F2EAE0; width:100% !important; }
+
+  /* Info pill — inline-block trick for 3-col that degrades gracefully */
+  .pill-col {
+    display:inline-block;
+    vertical-align:top;
+    width:31%;
+    min-width:140px;
+  }
+
+  /* ── MOBILE ── */
+  @media screen and (max-width:620px) {
+    .email-wrapper  { padding:0 !important; }
+    .email-card     { border-radius:0 !important; width:100% !important; }
+    .email-header   { padding:44px 24px 36px !important; }
+    .email-body     { padding:36px 24px 32px !important; }
+    .email-footer   { padding:28px 24px !important; }
+
+    h1.hero-line    { font-size:34px !important; }
+
+    /* 3-col info grid → single column */
+    .pill-col       { display:block !important; width:100% !important; min-width:0 !important; margin-bottom:12px !important; }
+    .pill-col:last-child { margin-bottom:0 !important; }
+
+    /* CTA full width */
+    .cta-btn        { width:100% !important; text-align:center !important; }
+    .cta-btn a      { display:block !important; padding:16px 24px !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#F2EAE0;width:100%;">
+
+<!--[if mso]>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td align="center">
+<![endif]-->
+
+<table class="email-wrapper" role="presentation" width="100%" cellpadding="0" cellspacing="0"
+  style="background:#F2EAE0;padding:40px 16px;">
+<tr><td align="center">
+
+  <table class="email-card" role="presentation" width="600" cellpadding="0" cellspacing="0"
+    style="max-width:600px;width:100%;border-radius:20px;overflow:hidden;
+           box-shadow:0 8px 48px rgba(44,24,16,0.15);">
+
+    <!-- ── HEADER ── -->
+    <tr>
+      <td class="email-header" style="background:#f15a28;padding:56px 48px 48px;text-align:center;">
+        <div style="width:36px;height:2px;background:rgba(255,253,249,0.38);margin:0 auto 24px;"></div>
+
+        <p style="margin:0 0 10px;font-family:'DM Sans',Arial,sans-serif;font-size:11px;
+                  font-weight:500;letter-spacing:4px;text-transform:uppercase;
+                  color:rgba(255,253,249,0.6);">Snickerdoodle Coffeeworks</p>
+
+        <h1 class="hero-line" style="margin:0 0 2px;font-family:'Playfair Display',Georgia,serif;
+                  font-size:42px;font-weight:700;color:#FFFDF9;line-height:1.1;letter-spacing:-0.5px;">
+          We got
+        </h1>
+        <h1 class="hero-line" style="margin:0 0 18px;font-family:'Playfair Display',Georgia,serif;
+                  font-size:42px;font-weight:700;color:#1E0A04;line-height:1.1;letter-spacing:-0.5px;">
+          your message.
+        </h1>
+
+        <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:16px;
+                  font-style:italic;color:rgba(255,253,249,0.85);line-height:1.6;">
+          Our team will be in touch within 24&nbsp;hours.
+        </p>
+
+        <div style="width:36px;height:2px;background:rgba(255,253,249,0.38);margin:24px auto 0;"></div>
+      </td>
+    </tr>
+
+    <!-- ── BODY ── -->
+    <tr>
+      <td class="email-body" style="background:#FFFDF9;padding:52px 48px 44px;">
+
+        <!-- Greeting -->
+        <p style="margin:0 0 6px;font-family:'Playfair Display',Georgia,serif;
+                  font-size:26px;font-weight:700;color:#2C1810;">Hello, {{to_name}}.</p>
+        <div style="width:44px;height:2px;background:#f15a28;margin:0 0 22px;"></div>
+
+        <p style="margin:0 0 16px;font-family:'DM Sans',Arial,sans-serif;font-size:15px;
+                  font-weight:400;color:#6B3A2A;line-height:1.82;">
+          Thank you for reaching out to
+          <strong style="font-weight:600;color:#2C1810;">Snickerdoodle Coffeeworks</strong>.
+          We've received your message and our team will get back to you shortly.
+        </p>
+        <p style="margin:0 0 40px;font-family:'DM Sans',Arial,sans-serif;font-size:15px;
+                  font-weight:400;color:#6B3A2A;line-height:1.82;">
+          While you wait, feel free to visit us or order online below.
+        </p>
+
+        <!-- ── 3-col info pills (fluid hybrid) ── -->
+        <div style="text-align:center;font-size:0;margin-bottom:36px;">
+
+          <div class="pill-col" style="display:inline-block;vertical-align:top;width:31%;min-width:140px;padding:0 5px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;
+                            padding:22px 12px;text-align:center;">
+                <p style="margin:0 0 8px;font-size:22px;line-height:1;">📍</p>
+                <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:10px;
+                          font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#2C1810;">Find Us</p>
+                <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:12px;
+                          font-style:italic;color:#9E6B54;line-height:1.6;">Kalyan &amp;<br/>Ambernath</p>
+              </td></tr>
+            </table>
+          </div>
+
+          <div class="pill-col" style="display:inline-block;vertical-align:top;width:31%;min-width:140px;padding:0 5px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;
+                            padding:22px 12px;text-align:center;">
+                <p style="margin:0 0 8px;font-size:22px;line-height:1;">🕐</p>
+                <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:10px;
+                          font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#2C1810;">Hours</p>
+                <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:12px;
+                          font-style:italic;color:#9E6B54;line-height:1.6;">Mon–Sun<br/>9am–10pm</p>
+              </td></tr>
+            </table>
+          </div>
+
+          <div class="pill-col" style="display:inline-block;vertical-align:top;width:31%;min-width:140px;padding:0 5px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td style="background:#FAF6F1;border:1.5px solid #EDD9BE;border-radius:12px;
+                            padding:22px 12px;text-align:center;">
+                <p style="margin:0 0 8px;font-size:22px;line-height:1;">📞</p>
+                <p style="margin:0 0 4px;font-family:'DM Sans',Arial,sans-serif;font-size:10px;
+                          font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#2C1810;">Call Us</p>
+                <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:12px;
+                          font-style:italic;color:#9E6B54;line-height:1.6;">+91 9860<br/>032615</p>
+              </td></tr>
+            </table>
+          </div>
+
+        </div>
+        <!-- end 3-col -->
+
+        <!-- CTA -->
+        <table class="cta-btn" role="presentation" cellpadding="0" cellspacing="0"
+          style="margin:0 auto 40px;">
+          <tr>
+            <td style="background:#1E0A04;border-radius:8px;">
+              <a href="https://www.zomato.com/mumbai/snickerdoodle-coffeeworks-ambernath-thane/order"
+                style="display:inline-block;font-family:'DM Sans',Arial,sans-serif;font-size:12px;
+                       font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+                       color:#FFFDF9;text-decoration:none;padding:15px 36px;">
+                Order Online
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Divider -->
+        <div style="width:100%;height:1px;background:#EDD9BE;margin-bottom:22px;"></div>
+
+        <p style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:12px;
+                  font-weight:300;color:#C4A090;text-align:center;line-height:1.75;">
+          You received this because you submitted a form on our website.<br/>
+          If this wasn't you, please disregard this email.
+        </p>
+
+      </td>
+    </tr>
+
+    <!-- ── FOOTER ── -->
+    <tr>
+      <td class="email-footer" style="background:#1E0A04;padding:32px 48px;text-align:center;">
+        <div style="width:36px;height:1px;background:rgba(241,90,40,0.45);margin:0 auto 18px;"></div>
+        <p style="margin:0 0 4px;font-family:'Playfair Display',Georgia,serif;font-size:15px;
+                  font-weight:500;font-style:italic;color:rgba(255,253,249,0.5);">
+          roasted with love, served with soul
+        </p>
+        <p style="margin:8px 0 0;font-family:'DM Sans',Arial,sans-serif;font-size:10px;
+                  font-weight:500;letter-spacing:3px;text-transform:uppercase;
+                  color:rgba(255,253,249,0.25);">
+          Snickerdoodle Coffeeworks
+        </p>
+      </td>
+    </tr>
+
+  </table><!-- /email-card -->
+
+</td></tr>
+</table><!-- /email-wrapper -->
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</body>
+</html>

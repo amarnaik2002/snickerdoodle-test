@@ -5,8 +5,6 @@ import { MA } from '../utils/motion'
 import { Bean } from '../icons'
 import useCountUp from '../hooks/useCountUp'
 
-gsap.registerPlugin(ScrollTrigger)
-
 function Stat({ end, suffix, label, go }) {
   const n = useCountUp(end, go)
   return (
@@ -49,11 +47,11 @@ export default function OurStory() {
   }, [])
 
   return (
-    <section ref={ref} style={{ background: '#F5E8D5', padding: '110px 64px' }}>
+    <section ref={ref} className="section-pad" style={{ background: '#F5E8D5', padding: '110px 64px' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
         {/* top grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.7fr', gap: 80, alignItems: 'center', marginBottom: 72 }}>
+        <div className="story-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.7fr', gap: 80, alignItems: 'center', marginBottom: 72 }}>
 
           {/* Left */}
           <div className="story-l" style={{ textAlign: 'center' }}>
@@ -134,7 +132,7 @@ export default function OurStory() {
             { end: 6,     suffix: '',  label: 'years of craft' },
           ].map((s, i) => [
             <div key={s.label} className="stat-item"><Stat {...s} go={go}/></div>,
-            i < 3 && <div key={`d${i}`} style={{ width: 1, height: 80, background: '#EDD9BE', alignSelf: 'center' }}/>,
+            i < 3 && <div key={`d${i}`} className="stat-divider" style={{ width: 1, height: 80, background: '#EDD9BE', alignSelf: 'center' }}/>,
           ])}
         </div>
       </div>
