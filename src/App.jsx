@@ -17,10 +17,11 @@ import Menu from './pages/Menu'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
+    // Native reset first — always works
+    window.scrollTo(0, 0)
+    // Then tell Lenis to sync its internal position
     if (window.__lenis) {
       window.__lenis.scrollTo(0, { immediate: true })
-    } else {
-      window.scrollTo(0, 0)
     }
   }, [pathname])
   return null

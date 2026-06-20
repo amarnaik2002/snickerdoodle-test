@@ -131,7 +131,11 @@ export default function Navbar() {
             <a
               key={label}
               href={href}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false)
+                window.scrollTo(0, 0)
+                if (window.__lenis) window.__lenis.scrollTo(0, { immediate: true })
+              }}
               style={{
                 fontFamily: 'Caprasimo, sans-serif', fontWeight: 800, fontSize: 14,
                 letterSpacing: '.08em', textDecoration: 'none',
